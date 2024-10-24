@@ -1,2 +1,3 @@
-# prueba_fs
-Prueba técnica para candidatos FS SUMZ
+# Assessment Fullstack junior
+
+Use node or python for JrFS test.
