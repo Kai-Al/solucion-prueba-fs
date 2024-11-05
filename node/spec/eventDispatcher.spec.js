@@ -1,7 +1,7 @@
 describe("EventDispatcher System", () => {
   describe("Mixin method", () => {
     it("Should mix in EventDispatcher methods on given object", () => {
-      let testObj = {};
+      const testObj = {};
       EventDispatcher.mixin(testObj);
 
       expect(typeof testObj.addEventListener).toBe("function");
@@ -14,10 +14,10 @@ describe("EventDispatcher System", () => {
 
   describe("Adding event listeners", () => {
     let testObj;
-    const testFunction = function () {
+    const testFunction = () => {
       console.log("a test function");
     };
-    const testFunction2 = function () {
+    const testFunction2 = () => {
       console.log("another test function");
     };
     const testEventName = "testEvent";
@@ -49,7 +49,7 @@ describe("EventDispatcher System", () => {
     });
 
     it("Should not share store between different instances", () => {
-      let testObj2 = {};
+      const testObj2 = {};
       EventDispatcher.mixin(testObj2);
       testObj.addEventListener(testEventName, testFunction);
 
@@ -60,10 +60,10 @@ describe("EventDispatcher System", () => {
 
   describe("Assert presence of listeners", () => {
     let testObj;
-    const testFunction = function () {
+    const testFunction = () => {
       console.log("a test function");
     };
-    const testFunction2 = function () {
+    const testFunction2 = () => {
       console.log("another test function");
     };
     const testEventName = "testEvent";
@@ -89,10 +89,10 @@ describe("EventDispatcher System", () => {
 
   describe("Removing event listeners", () => {
     let testObj;
-    const testFunction = function () {
+    const testFunction = () => {
       console.log("a test function");
     };
-    const testFunction2 = function () {
+    const testFunction2 = () => {
       console.log("another test function");
     };
     const testEventName = "testEvent";
